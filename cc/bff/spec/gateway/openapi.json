@@ -1,0 +1,64 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Airline gateway (BFF)",
+    "version": "2024-11-01"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:4004"
+    }
+  ],
+  "paths": {
+    "/v2/flights": {
+      "get": {
+        "operationId": "listFlightExpanded",
+        "summary": "List flights with related records expanded",
+        "description": "A scheduled flight leg, with its aircraft (fleet service) and its crew assignments and crew members (personnel service) joined server-side in one request.",
+        "parameters": [
+          {
+            "name": "ids",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Comma-separated flight ids (at most 100)."
+          },
+          {
+            "name": "expand",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Comma-separated related records to embed in each flight: `aircraft` (the flight's airframe), `assignments` (its crew assignments), `assignments.crew` (each assignment's crew member; implies `assignments`)."
+          },
+          {
+            "name": "fields",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Comma-separated dotted paths to return, relative to the flight; the flight id is always returned, and a path into a list applies to every item. Omit to return full records. Flight fields are those of listFlight; `aircraft.*` those of listAircraft; `assignments.*` those of listAssignment; `assignments.crew.*` those of listCrewMember. Nested values can be selected the same way, e.g. `aircraft.model.code`, `assignments.crew.typeRatings.expiresAt`."
+          },
+          {
+            "name": "assignmentRoles",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Comma-separated assignment roles to embed, e.g. CAPTAIN,FIRST_OFFICER for flight-deck crew only. Omit for the full roster."
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Flights with the requested expansions."
+          }
+        }
+      }
+    }
+  }
+}

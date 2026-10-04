@@ -40,7 +40,7 @@ import _search  # noqa: E402
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DEFAULT_SDL = os.path.join(REPO_ROOT, "services", "generated", "supergraph.graphql")
-DEFAULT_ENDPOINT = "http://localhost:5000"
+DEFAULT_ENDPOINT = "http://localhost:5050"
 
 _log = make_logger("supergraph-mcp")
 

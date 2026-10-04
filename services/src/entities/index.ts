@@ -55,7 +55,7 @@ export const PORTS: Record<ServiceName, { rest: number; graphql: number }> = {
   personnel: { rest: 4003, graphql: 5003 },
 };
 
-export const ROUTER_PORT = 5000;
+export const ROUTER_PORT = 5050;
 
 export const API_VERSION = '2024-11-01';
 export const REST_BASE_PATH = '/v2';

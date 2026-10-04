@@ -131,7 +131,7 @@ services:
       APOLLO_ROUTER_CONFIG_PATH: /etc/apollo/router.yaml
       APOLLO_ELV2_LICENSE: accept
       APOLLO_ROUTER_LOG: ${ROUTER_LOG:-info}
-    ports: ["5000:5000", "8088:8088"]
+    ports: ["5050:5000", "8088:8088"]
     # No container healthcheck: the official router image ships no HTTP client
     # (no wget, curl, or busybox — only /usr/bin/sh), so it cannot probe its own
     # /health. `depends_on` already gates startup on all three subgraphs being

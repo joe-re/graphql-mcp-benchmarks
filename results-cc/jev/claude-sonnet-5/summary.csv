@@ -1,0 +1,5 @@
+cell,condition,profile,task_id,n,n_reps,inference calls mean,inference calls sd,tool calls mean,tool calls sd,input tok mean,input tok sd,output tok mean,output tok sd,cache-read tok mean,cache-read tok sd,cache-create tok mean,cache-create tok sd,tool-payload tok mean,tool-payload tok sd
+M-R6-lean,M-R6,lean,M3@20,20,3,3,0.0,4,0.0,6,0.0,2794.33,38.89,21470.67,2414.19,29267.67,1625.36,16775.33,655.07
+M-R7-lean,M-R7,lean,M3@20,20,3,3.33,0.58,4,0.0,6.67,1.15,2751.33,56.5,20900.33,2143.99,18762.67,2503.97,9879,0.0
+M-R8-lean,M-R8,lean,M1@20,20,3,2,0.0,1.33,0.58,4,0.0,917.67,101.54,1793,1.0,4600,687.09,1574,363.61
+M-R8-lean,M-R8,lean,M3@20,20,3,4,1.0,10.33,7.09,8,2.0,3199.67,648.62,12741.67,7195.72,15854,2889.37,7315.33,1622.11

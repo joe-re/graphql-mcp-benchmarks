@@ -1,5 +1,10 @@
 # GraphQL-MCP vs REST-MCP token-efficiency benchmark
 
+> **This fork** adds a re-run of the benchmark with Claude Code (`claude -p`) and newer
+> models, plus experiments that isolate why GraphQL wins (REST + BFF, Jev). See
+> [`cc/README.md`](cc/README.md) (Japanese). Upstream files are unchanged except the
+> router's host port (5000 → 5050).
+
 Reproducible benchmark for the claim: **GraphQL-over-MCP reduces token consumption
 relative to REST-over-MCP for AI-agent tasks** — in both response payload size and
 the number of inference calls. Same data, same MCP protocol, same model, same tasks;

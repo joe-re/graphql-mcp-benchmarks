@@ -46,3 +46,11 @@ services/fixtures/*.json
 # supergraph.graphql for M-G1 — so committing them lets a fresh clone run all four
 # conditions without Node or rover. Staleness is caught by `pnpm test`
 # (src/test/codegen.test.ts) and `pnpm verify:supergraph`, not by hoping.
+
+# claude -p / multi-model verification (cc/): raw run logs stay local like runs/; the
+# parsed results-cc/, results-goose/ and results-models/ are committed.
+.tools/
+runs-cc/
+runs-goose-*/
+runs-goose-*.log
+runs-models/

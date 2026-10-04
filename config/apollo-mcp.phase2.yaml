@@ -13,7 +13,7 @@
 # Prerequisite: the stack must be up and composed.
 #   cd services && pnpm install && pnpm build
 #   docker compose up -d --wait && cd services && pnpm health
-endpoint: http://localhost:5000
+endpoint: http://localhost:5050
 
 transport:
   type: stdio
